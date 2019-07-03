@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Alert } from 'react-native';
+import { Text } from 'react-native';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 import firebase from 'firebase';
 
@@ -15,7 +15,7 @@ class LoginForm extends Component {
   onButtonPress() {
     console.log("onButtonPress was triggered");
 
-    const { email, password, loading } = this.state;    
+    const { email, password } = this.state;    
 
     this.setState({ error: '', loading: true });
 
@@ -50,7 +50,7 @@ class LoginForm extends Component {
     }
 
     return (
-      <Button onPress={this.onButtonPress.bind(this)}>
+      <Button passedPressFunction={this.onButtonPress.bind(this)}>
         Login
       </Button>
     );

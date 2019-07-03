@@ -33,7 +33,9 @@ class App extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <Button onPress={() => firebase.auth().signOut()}> Log Out </Button>
+          <Button passedPressFunction={() => firebase.auth().signOut()}> 
+            Log Out 
+          </Button>
         );
       case false:
         return <LoginForm />;
