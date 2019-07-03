@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { Header } from './components/common';
 import firebase from 'firebase';
 import LoginForm from './components/LoginForm';
+import AsyncStorage from '@react-native-community/async-storage';
 
 class App extends Component {
 
