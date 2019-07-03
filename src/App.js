@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { Header, Button, Spinner } from './components/common';
 import firebase from 'firebase';
 import LoginForm from './components/LoginForm';
@@ -33,8 +33,8 @@ class App extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <Button passedPressFunction={() => firebase.auth().signOut()}> 
-            Log Out 
+          <Button onPress={() => firebase.auth().signOut()}> 
+            Log Out
           </Button>
         );
       case false:
@@ -48,6 +48,7 @@ class App extends Component {
     return ( 
       <View>
         <Header headerText='Authentication' />
+        <Text>Log Out Button below seems to be flattened for some reason</Text>
         {this.renderContent()}
       </View>
      );

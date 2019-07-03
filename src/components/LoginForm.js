@@ -50,7 +50,7 @@ class LoginForm extends Component {
     }
 
     return (
-      <Button passedPressFunction={this.onButtonPress.bind(this)}>
+      <Button onPress={this.onButtonPress.bind(this)}>
         Login
       </Button>
     );
