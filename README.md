@@ -1,0 +1,1 @@
+React Native Project implementing Authentication and Firebase
